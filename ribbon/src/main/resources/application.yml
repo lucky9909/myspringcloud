@@ -1,0 +1,13 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    #将服务提供者IP注册到注册中心
+    prefer-ip-address: true
+

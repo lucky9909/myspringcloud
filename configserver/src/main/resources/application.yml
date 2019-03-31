@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  application:
+    #服务名
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: #Git仓库地址
+          search-paths: # Git仓库中存放配置文件的路径
+          username: #Git用户名
+          password: #Git密码
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
